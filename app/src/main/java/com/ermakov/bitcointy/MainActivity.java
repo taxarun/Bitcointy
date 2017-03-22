@@ -61,8 +61,12 @@ public class MainActivity extends AppCompatActivity implements ServiceHelper.Bit
 
         mResultTextView = (TextView) findViewById(R.id.yoad_result);
         mStatusTextView = (TextView) findViewById(R.id.status);
-        startUpdate();
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        startUpdate();
     }
 
     @Override
